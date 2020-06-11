@@ -1,0 +1,16 @@
+.arrow-up, .arrow-down{
+  border: none;
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  cursor: pointer;
+  border-right: 7px solid transparent;
+}
+
+.arrow-down{
+  border-top: 9px solid #ffa200;
+}
+
+.arrow-up{
+  border-bottom: 9px solid #ffa200;
+}

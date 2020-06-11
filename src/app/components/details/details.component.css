@@ -1,0 +1,9 @@
+.date-span{
+  font-size: 16px;
+  padding: 0 22px;
+  color: #777;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: inline-block;
+  margin:0 2px;
+}

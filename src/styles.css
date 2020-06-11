@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body, html{
+  direction: rtl;
+  color: #888;
+  font-size: 13px;
+}
+
+.btn-warning{
+  color: #fff;
+}
+
+.btn-warning, .bg-warning{
+  background-color: #ffa200!important;
+}

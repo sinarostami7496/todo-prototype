@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="card rounded mb-5">
+    <div class="card-body shadow">
+      <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" formControlName="title" placeholder="عنوان" class="form-control">
+          <small class="text-danger form-text text-right"
+            *ngIf="(getTitleControl.touched || submitted) && getTitleControl.errors?.required">
+            عنوان را وارد نمایید
+          </small>
+        </div>
+        <div class="form-group">
+          <textarea name="" id="" placeholder="متن" formControlName="description" class="form-control" cols="30"
+            rows="5"></textarea>
+            <small class="text-danger form-text text-right"
+            *ngIf="(getDescriptionControl.touched || submitted) && getDescriptionControl.errors?.required">
+            توضیحات را وارد نمایید
+          </small>
+        </div>
+
+        <div class="form-group row align-items-center">
+          <div class="col-md-4">
+              <app-time-picker (onChangeTime)="setTime($event)"></app-time-picker>
+
+              <small class="text-danger form-text text-right"
+            *ngIf="(submitted) && getHours.errors?.timeValidation">
+            ساعت وارد شده معتبر نمی باشد
+          </small>
+
+          </div>
+
+          <div class="col-md-8 text-center text-md-left mt-3 mt-md-0">
+            <button class="btn-warning btn btn-sm w-25">ایجاد</button>
+          </div>
+
+        </div>
+      </form>
+
+      <div>
+
+      </div>
+    </div>
+  </div>
+
+  <todo-list></todo-list>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="d-flex align-items-center">
+  <div class="d-flex flex-column align-items-center">
+    <span class="arrow-up mb-1" (click)="increaseSeconds(second)"> </span>
+    <input placeholder="00" (keyup)="changeSecond(second)" maxlength="2" minValue="0" appOnlyNumber maxValue="59" type="text"
+      class="form-control text-center" #second>
+    <span class="arrow-down mt-1" (click)="decreaseSeconds(second)"> </span>
+  </div>
+
+  <span class="mx-1">:</span>
+
+  <div class="d-flex flex-column align-items-center">
+    <span class="arrow-up mb-1" (click)="increaseMinutes(minute)"></span>
+    <input placeholder="00" (keyup)="changeMinute(minute)" #minute maxlength="2" appOnlyNumber maxValue="59" type="text" class="form-control text-center"
+      minValue="0">
+    <span class="arrow-down mt-1" (click)="decreaseMinutes(minute)"> </span>
+  </div>
+
+  <span class="mx-1">:</span>
+
+  <div class="d-flex flex-column align-items-center">
+    <span class="arrow-up mb-1" (click)="increaseHours(hour)"> </span>
+    <input #hour (keyup)="changeHour(hour)" placeholder="00" maxlength="2" appOnlyNumber minValue="0" maxValue="23" type="text"
+      class="form-control text-center">
+    <span class="arrow-down mt-1" (click)="decreaseHours(hour)"></span>
+  </div>
+</div>

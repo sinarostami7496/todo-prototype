@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="todo-details card">
+    <div class="card-body">
+      <h3 class="mb-4 text-right">{{todo.title}}</h3>
+      <p class="text-right">{{todo.description}}</p>
+
+     <div class="mt-5">
+      <span class="date-span">{{ todo.time.hours.toString().padStart(2, "0") }}</span> :
+      <span class="date-span">{{ todo.time.minutes.toString().padStart(2, "0") }}</span> :
+       <span class="date-span">{{ todo.time.seconds.toString().padStart(2, "0") }}</span>
+     </div>
+    </div>
+  </div>
+</div>
